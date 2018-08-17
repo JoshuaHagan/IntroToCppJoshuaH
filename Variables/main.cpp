@@ -69,7 +69,8 @@ int main()
 	// E) Answer = 6
 	int x = 13;
 	x = x / 2;
-	std::cout << "E) " << x << std::endl;
+	std::cout << "E) " << x << std::endl;
+
 	// F) Answer = 6.5
 	float y = 13;
 	y = y / 2;
@@ -83,14 +84,81 @@ int main()
 	std::cout << "Input degCelsius" << std::endl;
 	std::cin >> degCelsius;
 
-	float celsiusToFahrenheight = 
+	float celsiusToFahrenheight = 1.8 * 78.0 + 32;
 
 	std::cout << "Celsius to Fahrenheit)" << std::endl;
 	std::cout << "Celsius: " << degCelsius << std::endl;
 	std::cout << "Fahrenheit: " << degFahrenheit << std::endl;
 	
+	float rectWidth = 0.0f;
+	float rectHeight = 0.0f;
+	float rectArea = 0.0f;
+
+	
+
+	std::cout << "Area of a Rectangle)" << std::endl;
+	std::cout << "Input Width" << std::endl;
+	std::cin >> rectWidth;
+	std::cout << "Input Height" << std::endl;
+	std::cin >> rectHeight;
+	std::cout << "H: " << rectHeight << " , W: " << rectWidth << std::endl;
+	std::cout << "Area: " << rectWidth * rectHeight << std::endl;
 
 
-	system("pause"); 
+ //4.)
+	float a, b, c, d, e;
+	float avg;
+	avg = a = b = c = d = e = 0.0f;
+
+
+	
+
+
+
+	std::cout << "Average of Five)" << std::endl;
+	std::cout << "Input answer" << std::endl;
+	std::cin >> a;
+	std::cout << "Input answer" << std::endl;
+	std::cin >> b;
+	std::cout << "Input answer" << std::endl;
+	std::cin >> c;
+	std::cout << "Input answer" << std::endl;
+	std::cin >> d;
+	std::cout << "Input answer" << std::endl;
+	std::cin >> e;
+	std::cout << a << "," << b << "," << c << "," << d << "," << e << std::endl;
+	std::cout << "avg: " << (a + b + c + d + e) / 5 << std::endl;
+
+   //4.)
+	int k;
+	int l;
+
+
+	std::cout << "Number Swap)" << std::endl;
+	std::cout << "Enter k" << std::endl;
+	std::cin >> k;
+	std::cout << "Enter l" << std::endl;
+	std::cin >> l;
+	std::cout << "k is " << l << std::endl;
+	std::cout << "l is " << k << std::endl;
+
+
+
+
+	//5.)
+	int age;
+
+	std::cout << "Input Your Age" << std::endl;
+	std::cin >> age;
+	std::cout << "Howdy! You are " << age << " years old!" << std::endl;
+	std::cout << "You have been alive for" << (age * 12) << "months" << std::endl;
+
+
+
+
+
+
+
+	system("pause");
 
 }
