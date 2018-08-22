@@ -7,6 +7,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IntroToCppJoshuaH", "IntroT
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Variables", "Variables\Variables.vcxproj", "{0D711CD4-FCB3-40E7-BB13-2571953AAD83}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Conditional", "Conditional\Conditional.vcxproj", "{56CC1F65-D4CD-4164-8FCC-8F2283998784}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -31,6 +33,14 @@ Global
 		{0D711CD4-FCB3-40E7-BB13-2571953AAD83}.Release|x64.Build.0 = Release|x64
 		{0D711CD4-FCB3-40E7-BB13-2571953AAD83}.Release|x86.ActiveCfg = Release|Win32
 		{0D711CD4-FCB3-40E7-BB13-2571953AAD83}.Release|x86.Build.0 = Release|Win32
+		{56CC1F65-D4CD-4164-8FCC-8F2283998784}.Debug|x64.ActiveCfg = Debug|x64
+		{56CC1F65-D4CD-4164-8FCC-8F2283998784}.Debug|x64.Build.0 = Debug|x64
+		{56CC1F65-D4CD-4164-8FCC-8F2283998784}.Debug|x86.ActiveCfg = Debug|Win32
+		{56CC1F65-D4CD-4164-8FCC-8F2283998784}.Debug|x86.Build.0 = Debug|Win32
+		{56CC1F65-D4CD-4164-8FCC-8F2283998784}.Release|x64.ActiveCfg = Release|x64
+		{56CC1F65-D4CD-4164-8FCC-8F2283998784}.Release|x64.Build.0 = Release|x64
+		{56CC1F65-D4CD-4164-8FCC-8F2283998784}.Release|x86.ActiveCfg = Release|Win32
+		{56CC1F65-D4CD-4164-8FCC-8F2283998784}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

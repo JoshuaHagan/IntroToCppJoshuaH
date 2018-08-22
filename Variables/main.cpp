@@ -76,7 +76,7 @@ int main()
 	y = y / 2;
 	std::cout << "F)" << y << std::endl;
 
-	
+
 	float degCelsius = 78.0f;
 	float degFahrenheit = 0.0f;
 	// 1.) Answer = 172.4
@@ -139,8 +139,15 @@ int main()
 	std::cin >> k;
 	std::cout << "Enter l" << std::endl;
 	std::cin >> l;
-	std::cout << "k is " << l << std::endl;
-	std::cout << "l is " << k << std::endl;
+
+	int b = k;
+
+	k = l;
+	l = b;
+    
+
+	std::cout << "k is " << k << std::endl;
+	std::cout << "l is " << b << std::endl;
 
 
 
