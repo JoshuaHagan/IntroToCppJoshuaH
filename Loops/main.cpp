@@ -30,7 +30,12 @@ int main()
 	{
 		std::cout << i << std::endl;
 	}
-	
+
+	//1.)
+	for (int i = 100; i <= 0; i++)
+	{
+		std::cout << i << std::endl;
+	}
 
 
 	system("pause");
