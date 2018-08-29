@@ -2,7 +2,7 @@
 
 int main()
 {
-	char myfirstname[] = { 'M', 'A', 'T', 'T', 'H', 'E', 'W' };
+	/*char myfirstname[] = { 'M', 'A', 'T', 'T', 'H', 'E', 'W' };
 	int myfirstnumbers[7];
 	for (int i = 0; i < 7; i++)
 	{
@@ -11,7 +11,7 @@ int main()
 
 	}
 	system("pause");
-	return 0;
+	return 0;*/
 
 
 	int myarray[5] = { 12,21,3,7,13 };
@@ -53,42 +53,46 @@ int main()
 
 
 
-	//1.) Is each of the following a valid or invalid array definition?
-	{
-		std::cout << "valid";
-		std::cout << "Invalid";
-		std::cout << "Invalid";
-		std::cout << "Invalid";
-		std::cout << "valid";
-		std::cout << "valid";
-		std::cout << "valid";
-		std::cout << "valid";
-	}
+	////1.) Is each of the following a valid or invalid array definition?
+	//{
+	//	std::cout << "valid";
+	//	std::cout << "Invalid";
+	//	std::cout << "Invalid";
+	//	std::cout << "Invalid";
+	//	std::cout << "valid";
+	//	std::cout << "valid";
+	//	std::cout << "valid";
+	//	std::cout << "valid";
+	//}
+	//
+	////2.)Given the following array definition.
+	////What does each of the following display?
+	//{
+	//	std::cout << "a.10";
+	//	std::cout << "b.2";
+	//	std::cout << "c.6";
+	//	std::cout << "d.10";
+	//	std::cout << "e.It going to be invalid cause there is no 4th index";
+
+	//}
 	
-	//2.)Given the following array definition.
-	//What does each of the following display?
-	{
-		std::cout << "a.10";
-		std::cout << "b.2";
-		std::cout << "c.6";
-		std::cout << "d.10";
-		std::cout << "e.It going to be invalid cause there is no 4th index";
-
-	}
-
 	//3.) Write a for loop to initialize the following array (int data[10]) with the values 10, 9, 8... (Etc)
 
 	int data[10];
-	for (int i = 0; i > 10; i--)
+	for (int i = 10; i > 0; i--)
 	{
-		std::cout << data[i] << std::endl;
+		std::cout << i;
 	}
-
+	
 
 
 
 	//4.) Create a program that asks for 5 numbers from the user, and store them in an array. Print out the numbers in reverse order.
-	
+	int Array[5] = { 1,2,3,4,5 };
+	for (int i = 0; i > 5; i--)
+	{
+		std::cout << i;
+	}
 
 	system("pause");
 }
