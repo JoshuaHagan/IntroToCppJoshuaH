@@ -87,7 +87,7 @@ int main()
 
 
 
-
+	//4.) Create a program that asks for 5 numbers from the user, and store them in an array. Print out the numbers in reverse order.
 	
 
 	system("pause");
