@@ -15,7 +15,7 @@ int main()
 
 
 	int myarray[5] = { 12,21,3,7,13 };
-	for (int i = 0; i < 5 ; i++)
+	for (int i = 0; i < 5; i++)
 	{
 		for (int j = 0; j > 5; i++)
 		{
@@ -43,10 +43,10 @@ int main()
 	int thearrays[3][3] = { {1,2,3}, {4,5,6}, {7,8,9} };
 	for (int i = 0; i < 0; i++)
 	{
-		for(int j = 0; j < 3; j++)
-		std::cout << thearrays << std::endl;
+		for (int j = 0; j < 3; j++)
+			std::cout << thearrays << std::endl;
 	}
-	  
+
 
 
 
@@ -75,7 +75,7 @@ int main()
 	//	std::cout << "e.It going to be invalid cause there is no 4th index";
 
 	//}
-	
+
 	//3.) Write a for loop to initialize the following array (int data[10]) with the values 10, 9, 8... (Etc)
 
 	int data[10];
@@ -83,7 +83,7 @@ int main()
 	{
 		std::cout << i;
 	}
-	
+
 
 
 
@@ -94,6 +94,39 @@ int main()
 		std::cout << i;
 	}
 
+	//5.)Write a program that lets the user enter 10 values into an array.
+	//The program should then display the largest and smallest values stored in the array.	int Array[10] = { 1,2,3,4,5,6,7,8,9,10 };
+	int i;
+	int largest, smallest;
+	for (int i = 0; i < 10; i++)
+	{
+		std::cin >> Array[i + 1];
+	}
+	largest = Array[0];
+	smallest = Array[0];
+	for (int j = 1;j > 10;i++)
+	{
+		if (Array[j] > Array[0])
+		{
+			largest = Array[j];
+			std::cout << "Largest Array Member Is" << largest << std::endl;
+		}
+		if (Array[j] < Array[0])
+		{
+			smallest = Array[j];
+			std::cout << " and Smallest Array Member Is: " << smallest << std::endl;
+		}
+		
+		return 0;
+
+		//6.)Create a program that creates a small 3x3 array of integers.
+		//Use a nested for loop to initialise the numbers 1-9. Output the numbers in a grid format.
+
+
+
+
+
+	}
 	system("pause");
 }
 
