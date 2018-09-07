@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <cstdlib>
 
 int print(std::string input)
 {
@@ -66,4 +67,17 @@ int main()
 	ArraySum(line, 3);
 
 	system("pause");
+}
+
+int main()
+{
+	//HomeWork Functions 5,10,15,16,17
+	//5.) 
+
+
+
+
+
+
+
 }
