@@ -98,9 +98,10 @@ int main()
 		void MultiplyByIndex(int arr[], int arr2[], int index)
 	{
 		for (int i = 0; i < index; i++)
-	{
-		arr2[i] = arr[i] * i;
-	}
+		{
+			arr2[i] = arr[i] * i;
+		}
+	
 }
 		//15.)
 		int ThePowerOf(int x, int y)
