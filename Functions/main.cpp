@@ -105,12 +105,12 @@ int main()
 		//15.)
 		int ThePowerOf(int x, int y)
 {
-	int product = 0;
+	int item = 0;
 	for (int i = 1; i <= y; i++)
 	{
-		product = x * i;
+		item = x * i;
 	}
-	return product;
+	return item;
 }
 
 
