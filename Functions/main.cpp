@@ -73,8 +73,45 @@ int main()
 {
 	//HomeWork Functions 5,10,15,16,17
 	//5.) 
+	   void CoinToss(int numberOfTosses)
+	{
+	   int x;
+	   int heads = 0;
+	   int tails = 0;
+	   srand(time(0));
+	    for (int i = 0; i < numberOfTosses; i++)
+	{
+		x = rand() % 2;
+		if (x == 0)
+		{
+			heads++;
+		}
+		else
+		{
+			tails++;
+		}
+	}
+	std::cout << "Heads: " << heads << std::endl;
+	std::cout << "Tails: " << tails << std::endl;
+}
+		//10
+		void MultiplyByIndex(int arr[], int arr2[], int index)
+	{
+		for (int i = 0; i < index; i++)
+	{
+		arr2[i] = arr[i] * i;
+	}
+}
 
-
+		int ThePowerOf(int x, int y)
+{
+	int product = 0;
+	for (int i = 1; i <= y; i++)
+	{
+		product = x * i;
+	}
+	return product;
+}
 
 
 
