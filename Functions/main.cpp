@@ -73,13 +73,13 @@ int main()
 {
 	//HomeWork Functions 5,10,15,16,17
 	//5.) 
-	   void CoinToss(int numberOfTosses)
+	   void CoinToss(int Tosses)
 	{
 	   int x;
 	   int heads = 0;
 	   int tails = 0;
 	   srand(time(0));
-	    for (int i = 0; i < numberOfTosses; i++)
+	    for (int i = 0; i < Tosses; i++)
 	{
 		x = rand() % 2;
 		if (x == 0)
@@ -91,8 +91,8 @@ int main()
 			tails++;
 		}
 	}
-	std::cout << "Heads: " << heads << std::endl;
-	std::cout << "Tails: " << tails << std::endl;
+	std::cout << "Heads"<< std::endl;
+	std::cout << "Tails"<< std::endl;
 }
 		//10.)
 		void MultiplyByIndex(int arr[], int arr2[], int index)
