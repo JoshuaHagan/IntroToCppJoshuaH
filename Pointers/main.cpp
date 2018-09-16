@@ -43,4 +43,32 @@ int main()
 	int Nums[3] = { 2,4,6 };
 	int *ptr_Nums = &Nums[0];
 	
+	
+	
+	//1.)
+	//a.)
+	void RevString(char* array);
+	{
+
+		return;
+	}
+	//b.)
+	void CountEven(int* array, int array_len);
+	{
+
+	}
+	void Maximum(double* array, int array_size);
+	{
+
+
+		return Maximum;
+	}
+	//c.)
+	void Contains(char* array, char search_value);
+	{
+
+		return true;
+	}
+
+	
 }
