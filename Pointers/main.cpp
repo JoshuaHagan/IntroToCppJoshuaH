@@ -49,18 +49,29 @@ int main()
 	//a.)
 	void RevString(char* array);
 	{
+		for (i = 0; i < array; i++)
+		{
 
+		}
 		return;
 	}
 	//b.)
 	void CountEven(int* array, int array_len);
 	{
-
+		for (i = 0; i < array_len; i++)
+		{
+			int array_len = (i % 2);
+			std::cout << i << std::endl;
+			return even;
+		}
 	}
 	void Maximum(double* array, int array_size);
 	{
-
-
+		for (i = 0; i < array_size; i++)
+		{
+			nullptr = array_size;
+		}
+		
 		return Maximum;
 	}
 	//c.)
