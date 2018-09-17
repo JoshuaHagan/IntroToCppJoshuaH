@@ -27,7 +27,8 @@ int main()
 	//c.)
 	int& x = 20;
 	int& y = 40;
-	
+	std::cout << "&x = " << &x << std::endl;
+	std::cout << "&y = " << &y << std::endl;
 
 
 		
