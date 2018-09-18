@@ -4,9 +4,9 @@
 class Fighter
 {
 private:
-		int m_health;
-		int m_power;
-		
+	int m_health;
+	int m_power;
+
 
 public:
 	void TakeDamage(int amount);
@@ -19,34 +19,54 @@ private:
 	int values[20]; // array
 	int count = 0; // index
 
+
+
 public:
 	int top()
 	{
-
+		return values[count];
 	}
 	void pop()
 	{
+		values[count - 1] = -1;
+		count--;
 
 	}
 	void push(int v)
 	{  //add number to the top of the stack
-	  
-		values[count] = v;
-		count = count + 1;
-	}
-	bool isEmpty()
-	{
+		if (v <= 9 && v >= 0)
+		{
+			if (count = 19)
+			{
+				values[count] = v;
+				count++;
+			}
+			
+		}
+		if (v == 43)
+		{
+			values[count - 2] += values[count - 1];
+			pop();
+		}
+		if (v == 45)
+		{
+			values[count - 1] -= values[count - 2];
+			pop();
+		}
+	}	
 	
-	}
-	
-}
+};
 
 
 int main()
 {
 	Stack stack;
+	
+	stack.pop();
 	stack.push(20);
 
 
 
+
+	system("pause");
 }
