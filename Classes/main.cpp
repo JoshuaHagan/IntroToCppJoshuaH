@@ -25,11 +25,11 @@ public:
 
 	}
 	void pop()
-	{
+	{ //Pop the items off the stack
 
 	}
 	void push(int v)
-	{  //add number to the top of the stack
+	{  //add items to the top of the stack
 	  
 		values[count] = v;
 		count = count + 1;
