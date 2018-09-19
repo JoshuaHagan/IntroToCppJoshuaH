@@ -45,12 +45,12 @@ public:
 		}
 		if (v == 43)
 		{
-			values[count - 2] += values[count - 1];
+			values  += count;
 			pop();
 		}
 		if (v == 45)
 		{
-			values[count - 1] -= values[count - 2];
+			values -= count;
 			pop();
 		}
 	}	
