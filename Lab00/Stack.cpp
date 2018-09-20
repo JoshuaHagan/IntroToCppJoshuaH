@@ -8,12 +8,16 @@ Hero Stack::Top()
 // Pop the item off the stack
 bool Stack::Pop()
 {
+	mData[mCount];
+
+
 	return false;
 }
 // Push a item on to the Stack
 bool Stack::Push(Hero *)
 {
-	
+	mData[mCount] = *hero;
+	mCount++;
 	return false;
 }
 // Tell me if Stack is empty or not
