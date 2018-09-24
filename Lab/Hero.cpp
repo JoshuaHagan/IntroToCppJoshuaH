@@ -8,6 +8,7 @@ void Hero::Fight(Hero & h1)
 void Hero::TakeDamage(int amount)
 {
 	mHealth -= amount;
+	std::cout << "hero Has Taken..." << amount << std::endl;
 }
 
 Hero::Hero()
