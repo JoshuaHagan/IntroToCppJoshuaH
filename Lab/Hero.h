@@ -10,11 +10,10 @@ public:
 	void Fight(Hero&);
 	bool IsALive();
 	void TakeDamage(int amount);
-	float 100, 20;
 	bool operator == (Hero & hero)
 	{
 		
-		return mHealth.100 == hero.mHealth.100;	
+		return mHealth == hero.mHealth;	
 		
 	}
 	Hero();
