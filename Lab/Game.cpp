@@ -2,8 +2,7 @@
 #include "Game.h"
 Hero Game::Battle(Hero & h1, Hero & h2)
 {
-	std::cout << "Lodis" << h1 << std::endl;
-	std::cout << "Josh" << h2 << std::endl;
+
 	if ( h1.mHealth == h2.mHealth())
 	{
 		std::cout << "Heroes are Equal in Health" << std::endl;
