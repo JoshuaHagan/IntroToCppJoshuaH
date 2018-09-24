@@ -13,17 +13,24 @@ Hero Game::Battle(Hero & h1, Hero & h2)
 		std::cout << "Heroes are Equal in Power" << std::endl;
 			
 	}
+	std::cout << "Lodis" << mHealth << std::endl;
+	std::cout << "Josh" << mHealth << std::endl;
 	while (h1.IsALive() && h2.IsALive())
 	{
 		h1.Fight(h2);
 		h2.Fight(h1);
+	std::cout << "Lodis" << mHealth << std::endl;
+	std::cout << "Josh" << mHealth << std::endl;
+		
 	}
 	if (h1.IsALive > 0)
 	{
+		std::cout << "Lodis Wins!!!" << std::endl;
 		return h1;
 	}
 	else if (h2.IsALive < 0)
 	{
+		std::cout << "Josh Wins!!!" << std::endl;
 		return h2;
 	}
 	return Hero();
