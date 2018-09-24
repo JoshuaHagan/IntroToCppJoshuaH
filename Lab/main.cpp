@@ -1,13 +1,15 @@
-#include "Stack.h"
+#include "Stack.h" 
+#include <cstring>
+#include <time.h>
+#include <cstdlib>
 
 int main()
 {
-	Hero* Lodis = new Hero();
-	Lodis->Hero::Hero();
-	Hero* Josh = new Hero();
-	Josh->Hero::Hero();
-	Lodis->Fight(*Josh);
-	Josh->Fight(*Lodis);
-	std::cout << "Welcome to Hero Fight Game Prototype\n";
+	srand(time(0));
+	std::cout << "Welcome to Hero Fight Game Prototype\n";	
+	Hero*h1;
+	Hero*h2;
+	Game*g = new Game();
+	g->Battle();
 	system("pause");
 }

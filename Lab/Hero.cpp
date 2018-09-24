@@ -2,21 +2,23 @@
 
 void Hero::Fight(Hero & h1)
 {
+	mPower = rand() % 51;
 	h1.TakeDamage(mPower);
 }
 
 void Hero::TakeDamage(int amount)
 {
 	mHealth -= amount;
-	std::cout << "Lodis Has Taken..." << amount << std::endl;
-	std::cout << "Josh Has Taken..." << amount << std::endl;
+	std::cout << "My Hp: " << mHealth << std::endl;
+	
+	
 }
 
 Hero::Hero()
 {
-	mHealth = 100;
-	mPower = 20;
+	mHealth = 100;	
 }
+
 
 
 bool Hero::IsALive()
@@ -25,5 +27,8 @@ bool Hero::IsALive()
 	{
 		return true;
 	}
-	return false;
+	else
+	{
+		return false;
+	}
 }

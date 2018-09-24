@@ -4,10 +4,16 @@ class Hero
 {
 private:
 	int mHealth = 100;
-	int mPower = 20;
+	int mPower;
+	char* mName;
 	
 public:
-	void Fight(Hero&);
+
+	char* GetName()
+	{
+		return mName;
+	}
+	void Fight(Hero& h1);
 	bool IsALive();
 	void TakeDamage(int amount);
 	// Get the return value of mHealth,and mPower, but it can't be modify.
@@ -26,5 +32,11 @@ public:
 		return mHealth == hero.mHealth;	
 		
 	}
+
+	void SetName(const char* name)
+	{
+		mName = (char*)name;
+	}
+
 	Hero();
 };
