@@ -10,6 +10,11 @@ public:
 	void Fight(Hero&);
 	bool IsALive();
 	void TakeDamage(int amount);
-	
+	bool operator == (Hero & hero)
+	{
+		
+		return mHealth == hero.mHealth;	
+		
+	}
 	Hero();
 };
