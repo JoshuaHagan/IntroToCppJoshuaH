@@ -10,6 +10,16 @@ public:
 	void Fight(Hero&);
 	bool IsALive();
 	void TakeDamage(int amount);
+	// Get the return value of mHealth,and mPower, but it can't be modify.
+	int getHealth()
+	{
+		return mHealth;
+	}
+	int getPower()
+	{
+		return mPower;
+	}
+	// Overloading The Operator
 	bool operator == (Hero & hero)
 	{
 		
