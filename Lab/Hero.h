@@ -6,9 +6,9 @@ private:
 	int mHealth = 100;
 	int mPower;
 	char* mName;
-	
-public:
 
+public:
+	friend std::ostream& operator<<(std::ostream& os, const Hero& dt);
 	char* GetName()
 	{
 		return mName;

@@ -11,7 +11,14 @@ void Hero::TakeDamage(int amount)
 	mHealth -= amount;
 	std::cout << "My Hp: " << mHealth << std::endl;
 	
+    
 	
+}
+
+std::ostream& operator<<(std::ostream& os, const Hero& dt)
+{
+	os << dt.mName << '/' << dt.mPower << '/' << dt.mHealth;
+	return os;
 }
 
 Hero::Hero()

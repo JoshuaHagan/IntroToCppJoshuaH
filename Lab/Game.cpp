@@ -1,8 +1,6 @@
 #include "Game.h"
 Hero Game::Battle(Hero & h1, Hero & h2)
 {
-	std::cout << "Lodis" << h1.getHealth() << std::endl;
-	std::cout << "Josh" << h2.getHealth() << std::endl;
 	Hero winner;
 	if ( h1.getHealth() == h2.getHealth())
 	{
@@ -16,8 +14,8 @@ Hero Game::Battle(Hero & h1, Hero & h2)
 	}
 	while (h1.IsALive() && h2.IsALive())
 	{
-		std::cout << "Lodis Health is ... " << h1.getHealth() << std::endl;
-		std::cout << "Josh Health is ..." << h2.getHealth() << std::endl;
+		std::cout << "Lodis..." << h1.getHealth() << std::endl;
+		std::cout << "Josh..." << h2.getHealth() << std::endl;
 		h1.Fight(h2);
 		h2.Fight(h1);
 		system("pause");

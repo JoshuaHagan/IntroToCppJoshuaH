@@ -28,7 +28,7 @@ bool Stack::isEmpty()
 	{
 		return false;
 	}
-}
+} 
 // Tell me if Stack Full or not
 bool Stack::isFull()
 {
