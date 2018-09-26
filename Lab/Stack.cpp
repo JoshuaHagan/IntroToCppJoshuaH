@@ -15,11 +15,17 @@ bool Stack::Pop()
 	return false;
 }
 // Push a item on to the Stack
-bool Stack::Push(Hero *)
+bool Stack::Push(Hero *h1)
 {
-	mData[mCount + 1];
-	mCount++;
-	return false;
+	if (mCount < 20)
+	{
+		mData[mCount + 1] = *h1;
+		mCount++;
+	}
+	else
+	{
+		return false;
+	}
 }
 // Tell me if Stack is empty or not
 bool Stack::isEmpty()
