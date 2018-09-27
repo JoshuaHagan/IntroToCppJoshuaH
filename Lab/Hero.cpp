@@ -2,7 +2,7 @@
 //Give Random amount of Damage to the Heros
 void Hero::Fight(Hero & h1)
 {
-	mPower = rand() % 51;
+	mPower = rand() % 50;
 	h1.TakeDamage(mPower);
 }
 //Give The Amount of Damage the Heros Has Taken

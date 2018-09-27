@@ -11,7 +11,6 @@ Hero Game::Battle(Hero & h1, Hero & h2)
 	if (h1.getPower() == h2.getPower())
 	{
 		std::cout << "Heroes are Equal in Power" << std::endl;
-			
 	}
 	
 	while (h1.IsALive() && h2.IsALive())
@@ -27,13 +26,11 @@ Hero Game::Battle(Hero & h1, Hero & h2)
 	{
 		std::cout << h1.GetName() << std::endl;
 		winner = h1;
-		
 	}
 	if (h2.IsALive())
 	{
-		winner = h2;
 		std::cout << h2.GetName() << std::endl;
-		
+		winner = h2;
 	}
 	return winner;	
 }

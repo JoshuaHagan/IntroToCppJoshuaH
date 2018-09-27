@@ -2,16 +2,13 @@
 
 Hero Stack::Top()
 {
-
-	return Hero();
+	mData[mCount];
+	return mData[mCount];
 }
 // Pop the item off the stack
 bool Stack::Pop()
 {
-	mData[mCount - 1];
 	mCount--;
-
-
 	return false;
 }
 // Push a item on to the Stack
@@ -34,6 +31,10 @@ bool Stack::isEmpty()
 	{
 		return false;
 	}
+	else
+	{
+		return true;
+	}
 } 
 // Tell me if Stack Full or not
 bool Stack::isFull()
@@ -41,5 +42,9 @@ bool Stack::isFull()
 	if (mCount < 0)
 	{
 		return false;
+	}
+	else
+	{
+		return true;
 	}
 }
