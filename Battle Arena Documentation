@@ -1,36 +1,36 @@
-Joshua Hagan
-S188035
-IntroToCpp Assessment
+# IntroCppAssessment: Battle Arena Documentation
 
-                           Requirements Documentation
+# Requirements
 
+## Description of Problem
 
-I.       
-  - Name:Battle Arena Game
-Problem Statement: Make stack classes that put 2 teams against one   
-  another.           
-Problem Specification: 
+ - **Name:** Battle Arena Game
+ - **Problem Statement:** Implement anyway you wish, as long it *two-player*,*one-player*, or a *Simulator*.
+ - **Problem Specification:**
+    - The game or Simulator must conists of *two teams* of oppsing forces.
+    - The teams must be implement into two seperate classes.
+    - Each team take turn by picking out one hero from each team to battle.
 
-I.2     
--Input Information
-N/A
--Input Items
-N/A
+- **Requirements:** 
+   - A custom class is used to instantiate members of each force.
+   - The class stores a health variable, in addition to other information.
+   - The game contains two arrays, each containing instances of the custom class. These arrays make up the opposing forces.
+   - During each turn, members of each force must ‘fight’. Upon completion of each turn the members of each force are sorted according to health.
+   - When all members of a force have been defeated, a game-over message is displayed.
 
-I.3     	
- -Output Information
-N/A
+- **Input Information:**
+    - N/A
+- **Input Item:**
+    - N/A
 
-I.4     
- 	User Interface Information
-	N/A
-II.
-	Design Documentation
-       -System Architecture Description:
-	N/A
-       -Information about the objects
-       -Class Information:
-	N/A
-III. 
--Program Code:
+- **Output Information:**
+    - N/A
 
+- **User Information:**
+    - https://media.giphy.com/media/MSTq1f6jzBJGeIBtv4/giphy.gif
+
+  # Design Documentation
+
+  - **System Architecture Description:**
+    - https://docs.google.com/document/d/1Kh0RVoH7QVYT2yGfF_DnN0rOrdxyRITG16Ge0S1QHoM/edit
+  
