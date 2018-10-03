@@ -26,11 +26,354 @@
 - **Output Information:**
     - N/A
 
-- **User Information:**
+- **User Interface Information:**
     - https://media.giphy.com/media/MSTq1f6jzBJGeIBtv4/giphy.gif
 
   # Design Documentation
 
   - **System Architecture Description:**
-    - https://docs.google.com/document/d/1Kh0RVoH7QVYT2yGfF_DnN0rOrdxyRITG16Ge0S1QHoM/edit
-  
+    - [Google Docs image](https://docs.google.com/presentation/d/1z01p930eCX4P9eCqiNe_imI_lRFomkggVbX6Cf_ilkQ/edit#slide=id.g4312379791_0_5)
+
+- **Information about the object:**
+    - **Class:**
+        - Name: Hero
+            - Description: Called the Hero from the class
+            - Base Class: N/A
+        - **Class Attributes:**
+        - Name: mHealth
+                - Description: Give Health to the Hero
+                - Type: int
+                - Range of Acceptable values: 100
+            - Name: mPower
+                - Description: Give the Hero their power
+                - Type: int
+                - Range of Acceptable values: Any integer value
+            - Name: mName
+                - Description: Set the name of the Hero
+                - Type: Char
+                - Range of Acceptable values: Any amount of Characters
+    -  **Operations:**
+        - Prototype: Hero();
+            - Description: Default consturctor
+            - Pre-conditions: Hero is created
+            - Post-conditions:
+                - mHealth was 100
+                - mPower was rand()
+                - visibility: Public
+        - Prototype: Fight(Hero&);
+            - Description: Decrease the Hero mHealth
+            - Pre-conditions: Two Hero are created
+            - Post-conditions: mHealth decrease by mPower
+            - visibility: Public
+        - Prototype: TakeDamage(int amount);
+            - Description: Give the command for the Hero to do Damage 
+            - Pre-conditions: Hero is created
+            - visibility: Public
+        - Prototype: IsAlive();
+            - Description: Tell if the Hero is alive or not
+            - Pre-conditions: Hero is created
+    - Name: Stack
+         - Description: create a team of multiple Heroes
+         - Base Class: N/A
+         - **Attributes:**
+            - Name: mData[]
+                - Description: Points to the beginning of the array of size 20
+                - Type: Hero
+                - Range of Acceptable values: Any Hero
+            - Name: mCount;
+                - Description: points at the mData
+                - Type: int
+                - Range of Acceptable values: Any Hero
+         - **Operation:**
+            - Prototype: Stack();
+                - Description: default constructor for a stack
+                - Pre-conditions: N/A
+                - Post-Conditions:
+                - mCount points to the mData
+                - visibility: Public
+            - Prototype: Top();
+                - Description: returns to the top of the default index
+                - Pre-conditions:mData must have 1 Hero
+                - Post-condition: index 0 of mData is return
+                - visibility: Public
+            - Prototype: Pop();
+                - Description: Move the dead Hero off the top
+                - Pre-conditions: 1 Hero has to be alive
+                - Post-conditions: A Hero is remove if he dies
+                - visibility: Public
+            - Prototype: Push();
+                - Description: add Hero to the mData
+                - Pre-conditions: A Hero and stack is created
+                - Post-conditions: Hero is push in the mData array
+                - visibility: Public
+     - Name: Game
+        - Description: call the two stacks for the Heroes to Fight
+        - Base Class: N/A
+        -  **Attributes:**
+    - **Operation:**
+        - Prototype: getHealth();
+            - Description: Give the health to the players but can't be modify
+            - Pre-conditions: N/A
+            - visibility: Public
+        - Prototype: Battle(Hero&,Hero&):Hero;
+            - Description: Call the Fight function for the Heroes
+            - Pre-conditions: Hero Do Damage to one another
+            - visibility: Public
+        - Prototype: getPower();
+            - Description: Give Heroes Random amount of power
+            - Pre-conditions: N/A
+            - visibility: Public
+  # Implementation Documentation
+  - **Hero.h**
+```c++
+#pragma once
+#include <iostream>
+class Hero
+{
+private:
+	int mHealth = 100;
+	int mPower;
+	char* mName;
+
+public:
+	friend std::ostream& operator<<(std::ostream& os, const Hero& dt);
+	char* GetName()
+	{
+		return mName;
+	}
+	void Fight(Hero& h1);
+	bool IsALive();
+	void TakeDamage(int amount);
+	// Get the return value of mHealth,and mPower, but it can't be modify.
+	int getHealth()
+	{
+		return mHealth;
+	}
+	int getPower()
+	{
+		return mPower;
+	}
+	// Overloading The Operator
+	bool operator == (Hero & hero)
+	{
+		
+		return mHealth == hero.mHealth;	
+		
+	}
+
+	void SetName(const char* name)
+	{
+		mName = (char*)name;
+	}
+
+	Hero();
+};
+```
+ - **Hero.cpp**
+```c++
+#include "Hero.h"
+//Give Random amount of Damage to the Heros
+void Hero::Fight(Hero & h1)
+{
+	mPower = rand() % 50;
+	h1.TakeDamage(mPower);
+}
+//Give The Amount of Damage the Heros Has Taken
+void Hero::TakeDamage(int amount)
+{
+	mHealth -= amount;
+	std::cout << "Damage Taken..." << amount << std::endl;
+	
+    
+	
+}
+//Overload the operators of the ostream
+std::ostream& operator<<(std::ostream& os, const Hero& dt)
+{
+	os << dt.mName << '/' << dt.mPower << '/' << dt.mHealth;
+	return os;
+}
+
+Hero::Hero()
+{
+	mHealth = 100;	
+}
+
+
+
+bool Hero::IsALive()
+{
+	if (mHealth > 0)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+```
+- **Stack.h**
+```c++
+#pragma once
+#include "Game.h"
+class Stack
+{
+private:
+	Hero mData[20];
+	int mCount;
+	
+public:
+	Stack()
+	{
+		mCount = 0;
+	}
+	Hero Top();
+	bool Pop();
+	bool Push(Hero*h1);
+	bool isEmpty();
+	bool isFull();
+};
+```
+- **Stack.cpp**
+```c++
+#include "Stack.h"
+
+Hero Stack::Top()
+{
+	mData[mCount];
+	return mData[mCount];
+}
+// Pop the item off the stack
+bool Stack::Pop()
+{
+	mCount--;
+	return false;
+}
+// Push a item on to the Stack
+bool Stack::Push(Hero *h1)
+{
+	if (mCount < 20)
+	{
+		mData[mCount + 1] = *h1;
+		mCount++;
+	}
+	else
+	{
+		return false;
+	}
+}
+// Tell me if Stack is empty or not
+bool Stack::isEmpty()
+{
+	if (mCount > 0)
+	{
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+} 
+// Tell me if Stack Full or not
+bool Stack::isFull()
+{
+	if (mCount < 0)
+	{
+		return false;
+	}
+	else
+	{
+		return true;
+	}
+}
+```
+- **Game.h**
+```c++
+#pragma once
+#include "Hero.h"
+#include "Stack.h"
+
+class Game
+{
+public:
+	Hero Battle(Hero& h1, Hero& h2);
+};
+```
+- **Game.cpp**
+```c++
+#include "Game.h"
+Hero Game::Battle(Hero & h1, Hero & h2)
+{
+	Hero winner;
+	if ( h1.getHealth() == h2.getHealth())
+	{
+		std::cout << "Heroes are Equal in Health" << std::endl;
+			
+	}
+
+	if (h1.getPower() == h2.getPower())
+	{
+		std::cout << "Heroes are Equal in Power" << std::endl;
+	}
+	
+	while (h1.IsALive() && h2.IsALive())
+	{
+		std::cout << h1.GetName() << h1.getHealth() << std::endl;
+		std::cout << h2.GetName() << h2.getHealth() << std::endl;
+		h1.Fight(h2);
+		h2.Fight(h1);
+		system("pause");
+		system("cls");
+	}
+	if (h1.IsALive())
+	{
+		std::cout << h1.GetName() << std::endl;
+		winner = h1;
+	}
+	if (h2.IsALive())
+	{
+		std::cout << h2.GetName() << std::endl;
+		winner = h2;
+	}
+	return winner;	
+```
+- **main.cpp**
+```c++
+#include "Stack.h" 
+#include"Hero.h"
+#include "Game.h"
+#include <cstring>
+#include <time.h>
+#include <cstdlib>
+
+int main()
+{
+	srand(time(0));
+	std::cout << "Welcome to Hero Fight Game\n";
+	Hero*h1 = new Hero();
+	h1->SetName("Lodis...");
+	Hero*h2 = new Hero();
+	h2->SetName("Josh...");
+	Hero*h3 = new Hero();
+	h3->SetName("Robert...");
+	Hero*h4 = new Hero();
+	h4->SetName("Thomas...");
+	Stack team1;
+	Stack team2;
+	Stack Winner;
+	Stack Loser;
+	//Push each Hero on a team
+	team1.Push(h1);
+	team1.Push(h4);
+	team2.Push(h3);
+	team2.Push(h2);
+	Game*g = new Game();
+	g->Battle(*h1, *h3);
+	g->Battle(*h4, *h2);
+    
+	Winner.Push(new Hero);
+	Loser.Push(new Hero);
+	system("pause");
+}
+```
