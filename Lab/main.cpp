@@ -29,25 +29,7 @@ int main()
 	Game*g = new Game();
 	g->Battle(*h1, *h3);
 	g->Battle(*h4, *h2);
-	//Tell which hero has won and pop other cause he lost
-	//If can't figure out do what need to be DONE!!!!!!!
-	/*if (Winner.IsAlive() == true)
-	{
-		std::cout << team1.Top() << "Wins!!!\n";
-	}
-	else
-	{
-		team1.Pop();
-	}
-	g->Battle((Hero&)team1.Top(), (Hero&)team2.Top());
-	if (team1.isEmpty() == false)
-	{
-		std::cout << "Team 1 Wins!!!\n";
-	}
-	else
-	{
-		std::cout << "Team 2 Wins!!!\n";
-	}*/
+	
 	Winner.Push(new Hero);
 	Loser.Push(new Hero);
 	system("pause");
