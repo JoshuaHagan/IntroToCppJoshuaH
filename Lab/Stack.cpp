@@ -1,5 +1,5 @@
 #include "Stack.h"
-
+// Check to see if there anything on top of the Stack
 Hero Stack::Top()
 {
 	mData[mCount];

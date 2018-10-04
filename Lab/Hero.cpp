@@ -1,11 +1,11 @@
 #include "Hero.h"
-//Give Random amount of Damage to the Heros
+//Give Random amount of Damage to the Heroes
 void Hero::Fight(Hero & h1)
 {
 	mPower = rand() % 50;
 	h1.TakeDamage(mPower);
 }
-//Give The Amount of Damage the Heros Has Taken
+//Give The Amount of Damage the Heroes Has Taken
 void Hero::TakeDamage(int amount)
 {
 	mHealth -= amount;
@@ -27,7 +27,7 @@ Hero::Hero()
 }
 
 
-
+// A function that check to see if the Fighter is Alive by Health if not they are Dead
 bool Hero::IsALive()
 {
 	if (mHealth > 0)

@@ -2,7 +2,9 @@
 
 int main()
 {
+	// Set the array grid up for the tokens 
 	char board[3][3] = { { ' ', ' ', ' ' },{ ' ', ' ', ' ' },{ ' ', ' ', ' ' } };
+	// Set X as a token
 	char activeToken = 'x';
 	int input;
 
@@ -63,6 +65,7 @@ int main()
 		}
 
 		std::cout << "Next Player Turn.\n";
+		// Check to see if X is a token then if is change it to a O token
 		activeToken = (activeToken == 'x') ? 'o' : 'x';
 
 

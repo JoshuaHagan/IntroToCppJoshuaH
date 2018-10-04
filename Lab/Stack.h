@@ -3,7 +3,9 @@
 class Stack
 {
 private:
+	// The Hero array 
 	Hero mData[20];
+	// Incrament the Hero array mData
 	int mCount;
 	
 public:
