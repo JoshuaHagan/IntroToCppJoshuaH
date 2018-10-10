@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{A8A28BAE-AF6B-4B1B-B6DF-06FB48D8048A}</ProjectGuid>
-    <RootNamespace>MorningWarmup</RootNamespace>
+    <ProjectGuid>{4672AE17-64FA-4C18-BBE8-0D4E4774866A}</ProjectGuid>
+    <RootNamespace>LinkedList</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -115,7 +115,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="warmup.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Iterator.h" />
+    <ClInclude Include="LinkedList.h" />
+    <ClInclude Include="node.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
