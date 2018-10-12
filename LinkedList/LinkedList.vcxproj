@@ -118,6 +118,9 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Define3.h" />
+    <ClInclude Include="DefineList.h" />
+    <ClInclude Include="DefineList2.h" />
     <ClInclude Include="Iterator.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="node.h" />
