@@ -1,8 +1,8 @@
 #pragma once
-#include "DefineList.h"
+#include "CheckList.h"
 
 template <class S>
-class Define2 :Define<S>
+class SearchList:CheckList<S>
 {
 	void destroyList() override;
 	Type front() override;
@@ -11,12 +11,12 @@ class Define2 :Define<S>
 };
 
 template<class S>
- void Define2<S>::destroyList()
+ void SearchList<S>::destroyList()
 {
 }
 
  template<class S>
-  bool Define2<S>::search(const Type &)
+  bool SearchList<S>::search(const Type &)
  {
 	 return false;
  }

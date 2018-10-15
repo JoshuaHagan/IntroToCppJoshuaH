@@ -2,7 +2,7 @@
 #include "LinkedList.h"
 
 template <class M>
-class Define:linkedListType<M>
+class CheckList:linkedListType<M>
 {
 	bool isEmptyList() override;
 	void print() override;
@@ -10,23 +10,23 @@ class Define:linkedListType<M>
 	void destroyList() override;
 };
 template<class M>
- bool Define<M>::isEmptyList()
+ bool CheckList<M>::isEmptyList()
 {
 	return false;
 }
 
  template<class M>
-  void Define<M>::print()
+  void CheckList<M>::print()
  {
  }
 
   template<class M>
-   int Define<M>::length()
+   int CheckList<M>::length()
   {
 	  return 0;
   }
 
    template<class M>
-    void Define<M>::destroyList()
+    void CheckList<M>::destroyList()
    {
    }

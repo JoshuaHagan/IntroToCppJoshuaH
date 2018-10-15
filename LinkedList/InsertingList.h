@@ -1,8 +1,8 @@
 #pragma once
-#include "DefineList2.h"
+#include "SearchList.h"
 
 template <class R>
-class Define3 :Define2<R>
+class InsertingList:SearchList<R>
 {
 	void insertFirst(const Type&) () override;
 	void insertLast(const Type&)  () override;
@@ -10,16 +10,16 @@ class Define3 :Define2<R>
 };
 
 template<class R>
- void Define3<R>::insertFirst(const Type &)()
+ void InsertingList<R>::insertFirst(const Type &)()
 {
 }
 
  template<class R>
-  void Define3<R>::insertLast(const Type &)()
+  void InsertingList<R>::insertLast(const Type &)()
  {
  }
 
   template<class R>
-   void Define3<R>::deleteNode(const Type &)()
+   void InsertingList<R>::deleteNode(const Type &)()
   {
   }
