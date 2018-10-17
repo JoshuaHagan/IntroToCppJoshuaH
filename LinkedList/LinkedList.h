@@ -42,14 +42,16 @@ template<class Type>
 template<class Type>
  void linkedListType<Type>::initializeList()
 {
+	 count = 0;
+	 first = nullptr;
+	 last = nullptr;
 	 
 }
 
 template<class Type>
  bool linkedListType<Type>::isEmptyList() const
 {
-	 count == 0;
-	return false;
+	return count == 0;
 }
 
 template<class Type>
@@ -73,38 +75,41 @@ template<class Type>
 template<class Type>
  Type linkedListType<Type>::front() const
 {
-	return ;
+	return n1->info;
 }
 
 template<class Type>
  Type linkedListType<Type>::back() const
 {
-	return Type();
+	return n2->info;
 }
 
 template<class Type>
  linkedListIterator<Type> linkedListType<Type>::begin()
 {
-	return linkedListIterator<Type>();
+	return linkedListIterator<Type>(current->first);
 }
 
 template<class Type>
  linkedListIterator<Type> linkedListType<Type>::end()
 {
-	return linkedListIterator<Type>();
+	return linkedListIterator<Type>(current->last);
 }
 
 template<class Type>
  linkedListType<Type>::linkedListType()
 {
+	 initializeList();
 }
 
 template<class Type>
  linkedListType<Type>::linkedListType(const linkedListType<Type>&)
 {
+	
 }
 
 template<class Type>
  linkedListType<Type>::~linkedListType()
 {
+	 initializeList();
 }
