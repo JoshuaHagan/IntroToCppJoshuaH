@@ -103,9 +103,9 @@ template<class Type>
 }
 
 template<class Type>
- linkedListType<Type>::linkedListType(const linkedListType<Type>&)
+ linkedListType<Type>::linkedListType(const linkedListType<Type>&copy)
 {
-	
+	List = copy->List;
 }
 
 template<class Type>
@@ -113,3 +113,10 @@ template<class Type>
 {
 	 initializeList();
 }
+
+ template<class Type>
+	void linkedListType<Type>::copyList(const linkedListType<Type>&copy)
+ {
+		linkedListType<Type> *List = new linkedListType<Type>;
+		List = copy;
+ }
