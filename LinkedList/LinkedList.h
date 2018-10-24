@@ -51,7 +51,7 @@ template<class Type>
 template<class Type>
  bool linkedListType<Type>::isEmptyList() const
 {
-	return count == 0;
+	return (count == 0);
 }
 
 template<class Type>

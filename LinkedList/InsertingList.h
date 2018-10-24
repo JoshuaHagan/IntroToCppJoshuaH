@@ -26,9 +26,8 @@ template<class R>
  }
 
   template<class R>
-   void InsertingList<R>::deleteNode(const R &)()
+   void InsertingList<R>::deleteNode(const R &node)()
   {
-	   node = *n7;
-	   node = *n8;
-	   n7->first; 
+	   node->nodeType<R>;
+	   nodeType<R>->delete;
   }
