@@ -32,8 +32,5 @@
     <ClInclude Include="InsertingList.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="SearchList.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
