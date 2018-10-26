@@ -60,7 +60,7 @@ void linkedListType<Type>::print() const
 	nodeType<Type>* iterator;
 	for (int i = 0; i < iterator; i++)
 	{
-
+		   
 	}
 }
 
@@ -122,5 +122,5 @@ linkedListType<Type>::~linkedListType()
  void linkedListType<Type>::copyList(const linkedListType<Type>&copy)
  {
 	 linkedListType<Type> *List = new linkedListType<Type>;
-	 List = copy;
+	 List = copy->List ;
  }

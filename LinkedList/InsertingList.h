@@ -4,14 +4,15 @@
 template <class R>
 class InsertingList:linkedListType<R>
 {
-	void insertFirst(const R&) () override;
-	void insertLast(const R&)  () override;
-	void deleteNode(const R&) () override;
-	void search(const R&) () override;
+public:
+	void insertFirst(const R&)  override;
+	void insertLast(const R&)   override;
+	void deleteNode(const R&)  override;
+	void search(const R&)  override;
 };
 
 template<class R>
- void InsertingList<R>::insertFirst(const R & n3)()
+ void InsertingList<R>::insertFirst(const R & n3)
 {
 	 nodeType <R> * n5 = new nodeType<R>;
 	 n5->info = n5;	
@@ -20,7 +21,7 @@ template<class R>
 }
 
  template<class R>
-  void InsertingList<R>::insertLast(const R & n4)()
+  void InsertingList<R>::insertLast(const R & n4)
  {
 	  nodeType <R> * n6 = new nodeType<R>;
 	  n6->info = n6;
@@ -29,7 +30,7 @@ template<class R>
  }
 
   template<class R>
-  void InsertingList<R>::deleteNode(const R &node)()
+  void InsertingList<R>::deleteNode(const R &node)
   {  
 	   nodeType<Type>* ptr = first;
 	   nodeType<Type>* tail = ptr;
