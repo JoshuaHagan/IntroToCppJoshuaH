@@ -1,19 +1,20 @@
 #pragma once
-#include "SearchList.h"
+#include "LinkedList.h"
 
 template <class R>
-class InsertingList:SearchList<R>
+class InsertingList:linkedListType<R>
 {
 	void insertFirst(const R&) () override;
 	void insertLast(const R&)  () override;
 	void deleteNode(const R&) () override;
+	void search(const R&) () override;
 };
 
 template<class R>
  void InsertingList<R>::insertFirst(const R & n3)()
 {
 	 nodeType <R> * n5 = new nodeType<R>;
-	 n5->info = R;	
+	 n5->info = first;	
 	 n5->link = this->first;
 	this->first = n5->link;
 }
@@ -47,3 +48,17 @@ template<class R>
    //	tail.link = ptr.link
    //	delete ptr
    //	return
+  template<class R>
+  void InsertingList<R>::search(const R &snode)
+  {
+	  nodeType<Type>* ptr = first;
+	  nodeType<Type>* tail = ptr;
+	  while (ptr->info != snode)
+	  {
+		  tail = ptr;
+		  ptr = ptr->link;
+	  }
+	  tail->link = ptr->link;
+
+	  return true;
+  }

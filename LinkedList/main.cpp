@@ -21,5 +21,7 @@ int main()
 	nodeType<int>* n4 = new nodeType<int>{ 12 };
 
 
+
+
 	system("pause");
 }
