@@ -119,7 +119,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="InsertingList.h" />
-    <ClInclude Include="SearchList.h" />
     <ClInclude Include="Iterator.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="node.h" />
