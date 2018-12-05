@@ -37,6 +37,7 @@ const linkedListType<Type>& linkedListType<Type>::operator=(const linkedListType
 {
 	// TODO: insert return statement here
 	this->copylist(cnode);
+	return *this;
 }
 
 template<class Type>
