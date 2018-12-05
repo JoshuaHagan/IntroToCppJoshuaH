@@ -9,6 +9,7 @@ public:
 	void insertLast(const R&)   override;
 	void deleteNode(const R&)  override;
 	void search(const R&)  override;
+	nodeType<R>*first;
 };
 
 template<class R>
@@ -32,9 +33,10 @@ template<class R>
   template<class R>
   void InsertingList<R>::deleteNode(const R &node)
   {  
-	   nodeType<Type>* ptr = first;
-	   nodeType<Type>* tail = ptr;
-	   while (ptr->info != dnode)
+
+	   nodeType<R>* ptr = first;
+	   nodeType<R>* tail = ptr;
+	   while (ptr->info != node)
 	   {
 		   tail = ptr;
 		   ptr = ptr->link;
@@ -52,8 +54,8 @@ template<class R>
   template<class R>
   void InsertingList<R>::search(const R &snode)
   {
-	  nodeType<Type>* ptr = first;
-	  nodeType<Type>* tail = ptr;
+	  nodeType<R>* ptr = first;
+	  nodeType<R>* tail = ptr;
 	  while (ptr->info != snode)
 	  {
 		  tail = ptr;

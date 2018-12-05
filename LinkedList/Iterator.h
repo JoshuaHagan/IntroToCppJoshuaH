@@ -6,6 +6,8 @@ class linkedListIterator
 {
 private:
 	nodeType<Type>*current;
+	nodeType<Type>*n1;
+	nodeType<Type>*n2;
 public:
 	linkedListIterator();
 	linkedListIterator(nodeType<Type>*);
