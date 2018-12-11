@@ -36,7 +36,6 @@ template<class Type>
 const linkedListType<Type>& linkedListType<Type>::operator=(const linkedListType<Type>&cnode)
 {
 	// TODO: insert return statement here
-	this->copylist(cnode);
 	return *this;
 }
 
@@ -58,11 +57,13 @@ bool linkedListType<Type>::isEmptyList() const
 template<class Type>
 void linkedListType<Type>::print() const
 {
-	nodeType<Type>* iterator;
-	for (int i = 0; i < iterator; i++)
+	nodeType<Type>* List = this->first;
+	for (int i = 0; i < count; i++)
 	{
-		   
+		std::cout << List->info << std::endl;
+		List = List->link;
 	}
+	 
 }
 
 template<class Type>
@@ -74,6 +75,8 @@ int linkedListType<Type>::length() const
 template<class Type>
 void linkedListType<Type>::destroyList()
 {
+	nodeType<Type>* deletenode->first;
+	
 	count--;
 }
 
@@ -122,6 +125,10 @@ linkedListType<Type>::~linkedListType()
  template<class Type>
  void linkedListType<Type>::copyList(const linkedListType<Type>&copy)
  {
-	 linkedListType<Type> *List = new linkedListType<Type>;
-	 List = copy->List ;
+	  nodeType<Type>* point = (copy.first);
+	 point = copy.first ;
+	 for (int i = 0; i < count; i++)
+	 {
+		 this->first = point;
+	 }
  }

@@ -14,13 +14,25 @@ int main()
 	linkedListIterator<int> iterate (n1);
 	++iterate;
 	int why = *iterate;*/
-	InsertingList<int> i;
-	i.insertFirst(2);
+	InsertingList<int>* list = new InsertingList<int>;
+	
 	nodeType<int>* n1 = new nodeType<int>{ 2 };
 	nodeType<int>* n2 = new nodeType<int>{ 4 };
 	nodeType<int>* n3 = new nodeType<int>{ 8 };
 	nodeType<int>* n4 = new nodeType<int>{ 12 };
 
+
+	list->insertFirst(n1->info);
+	list->insertLast(n2->info);
+	list->insertFirst(n4->info);
+
+	InsertingList<int>* list2 = new InsertingList<int>;
+	list2 = list;
+	list->print(); 
+	list->destroyList();
+	list->print();
+	
+	
 
 
 

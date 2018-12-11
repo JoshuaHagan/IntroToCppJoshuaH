@@ -2,32 +2,51 @@
 #include "LinkedList.h"
 
 template <class R>
-class InsertingList:linkedListType<R>
+class InsertingList: public linkedListType<R>
 {
 public:
 	void insertFirst(const R&)  override;
 	void insertLast(const R&)   override;
 	void deleteNode(const R&)  override;
 	bool search(const R&) const;
-	nodeType<R>*first;
 };
 
 template<class R>
- void InsertingList<R>::insertFirst(const R & n3)
+ void InsertingList<R>::insertFirst(const R & newvalue)
 {
-	 nodeType <R> * n5 = new nodeType<R>;
-	 n5->info = n3;	
-	 this->first = n5;
+	 nodeType <R> * temp = new nodeType<R>;
+	 temp->info = newvalue;
+	 if (this->isEmptyList())
+	 {
+		 this->first = temp;
+		 this->last = temp;
+	 }
+	 else
+	 {
+		 temp->link = this->first;
+		 this->first = temp;
+	 }
+	 this->count++;
 	 
 }
 
  template<class R>
-  void InsertingList<R>::insertLast(const R & n4)
+  void InsertingList<R>::insertLast(const R & newvalue)
  {
-	  nodeType <R> * n6 = new nodeType<R>;
-	  n6->info = n4;
-	  this->last->link = n6;
-	  this->last = n6;
+	  nodeType <R> * temp = new nodeType<R>;
+	  temp->info = newvalue;
+	  if (this->isEmptyList())
+	  {
+		  this->first = temp;
+		  this->last = temp;
+	  }
+	  else
+	  {
+		  this->last->link = temp;
+		  this->last = this->last->link;
+	  }
+	 this->count++;
+		
 	  
  }
 
@@ -35,7 +54,7 @@ template<class R>
   void InsertingList<R>::deleteNode(const R &node)
   {  
 
-	   nodeType<R>* ptr = first;
+	   nodeType<R>* ptr = this->first;
 	   nodeType<R>* tail = ptr;
 	   while (ptr->info != node)
 	   {
@@ -48,7 +67,7 @@ template<class R>
   template<class R>
   inline bool InsertingList<R>::search(const R &snode) const
   {
-	  nodeType<R>* ptr = first;
+	  nodeType<R>* ptr = this->first;
 	  nodeType<R>* tail = ptr;
 	  while (ptr->info != snode)
 	  {
